@@ -1,1 +1,121 @@
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>MCS | Landing Page</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="style.css">
+    </head>
+   <body>
+      <nav>
+         <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+         </div>
+         <div class="logo">
+            <a href="https://mcs.nust.edu.pk/about-us/"><img src="MCS-logo.png" alt="MCS-logo"></a>
+         </div>
+         <div class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#exploreus">Explore Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">News</a></li>
+         </div>
+         <div class="search-icon">
+            <span class="fas fa-search"></span>
+         </div>
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+         <form action="#">
+            <input type="search" class="search-data" placeholder="Search in NUST" required>
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+      </nav>
+      <div class="content">
+        <img src="bg.jpeg" alt="background" class="bg">
+        <a href="#about"><i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+      <section class="about" id="about">
+        <div id="about" class="heading">
+          <strong>ABOUT US</strong>
+        </div>
+        <div class="cont">
+          <div class="about-image">
+            <img src="comm.jpeg" alt="background" class="bg">
+          </div>
+          <div class="about-content">
+            <h2>Commandant's Message</h2>
+            <p>Welcome to the Military College of Signals, a campus of the National University of Sciences & Technology - a prestigious institute of higher learning that has become a benchmark of excellence in South Asia. As the leader of this esteemed institution, I am honored to serve and committed to advancing its mission of providing affordable, SDG-engaged, fourth-generation entrepreneurial education. Our faculty and staff are dedicated to excellence in teaching, research, and service, and I am proud of all that we have accomplished together. During the coming year, I am eager to work with all of you to continue this progress and provide a dynamic and supportive learning environment for our students. Our goal is to equip them with the necessary skills and knowledge to tackle the world's most pressing challenges, while also preparing them for the fast-changing world. I welcome you to join us in any capacity to shape the future, lead the nation's progress, and contribute to serving humanity. Let us work together to make the best of 2023, as we strive to impart quality education and prepare our students for a successful future.</p>
+            <a href="https://mcs.nust.edu.pk/about-us/" class="read-more">Read More</a>
+          </div>
+        </div>
+      </section>
+      <section class="explore" id="exploreus">
+        <div class="heading">
+          <strong>EXPLORE US</strong>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="cases explore-info">
+          <div class="box">
+            <p><span>Our History</span><br>We were established in March 1991for the promotion of higher scientific education in the country, especially...</p>
+            <img src="history.jpeg" alt="Our History">
+          </div>
+          <div class="box">
+            <p><span>MCS Today</span><br>We come a long way as a trendsetting comprehensive S&T university of Pakistan since its...</p>
+            <img src="today.jpeg" alt="MCS Today">
+          </div>
+          <div class="box">
+            <p><span>MCS-NUST Rankings</span><br>Our degrees are acceptable worldwide, and our univerity's rank is among the first...</p>
+            <img src="ranks.jpeg" alt="NUST Rankings">
+          </div>
+          <div class="box">
+            <p><span>Offices and Resources</span><br>Since its inception in 1991, MCS has moved forward in monumental strides and earned the infallible...</p>
+            <img src="offices.jpeg" alt="Offices and Resources">
+          </div>
+        </div>
+      </section>
+     <section class="footer">
+      <div class="footer">
+        <div>+92 322 5643145</div>
+        <div>© 2023 National Univsersity of Sciences and Technology. All Rights Reserved.</div>
+        <div>FOLLOW US ON</div>
+        <div class="socials">
+          <a href="https://www.facebook.com/nust.mcs/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/samar-qaiser-263774287/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com/npo_nust?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div></div>
+      </div>
+    </sectio>
+      <script>
+         const menuBtn = document.querySelector(".menu-icon span");
+         const searchBtn = document.querySelector(".search-icon");
+         const cancelBtn = document.querySelector(".cancel-icon");
+         const items = document.querySelector(".nav-items");
+         const form = document.querySelector("form");
+         menuBtn.onclick = ()=>{
+           items.classList.add("active");
+           menuBtn.classList.add("hide");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+         cancelBtn.onclick = ()=>{
+           items.classList.remove("active");
+           menuBtn.classList.remove("hide");
+           searchBtn.classList.remove("hide");
+           cancelBtn.classList.remove("show");
+           form.classList.remove("active");
+           cancelBtn.style.color = "#ff3d00";
+         }
+         searchBtn.onclick = ()=>{
+           form.classList.add("active");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+      </script>
+   </body>
+</html>
